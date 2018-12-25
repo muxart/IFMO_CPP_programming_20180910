@@ -24,5 +24,12 @@
 using namespace std;
 
 int t02_up() {
-    
+    char l;
+    cin >> l;
+    if (l >= 'a' && l <= 'z') {
+        l = l + 'A' - 'a';
+        cout << l;
+    } else {
+        cout << l;
+    }
 }

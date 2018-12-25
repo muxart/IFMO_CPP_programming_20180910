@@ -28,5 +28,21 @@
 using namespace std;
 
 int t04_count() {
-
+    char s[80];
+    int w, c = 0;
+    cout << endl;
+    cin.get(s, 80);
+    int i = 0;
+    while (s[i] == ' ' && s[i] != '\0')
+        i++;
+    w = 0;
+    while (s[i] != '\0') {
+        if (s[i] != ' ' && w == 0) {
+            w = 1;
+            c++;
+        } else if (s[i] == ' ')
+            w = 0;
+        i++;
+    }
+    cout << c;
 }
